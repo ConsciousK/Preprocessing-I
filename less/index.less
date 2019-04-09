@@ -54,9 +54,79 @@ html, body {
 /*--------------- Begin Preprocesser Code here by kevin-grant ---------------*/
 
 /*Declare Variables */
-
+@basefontcolor: black;
+@defaultverticalmargin: 20px;
+@mainheaderfontsize: 50px;
+@subheaderfontsize: 20px;
+@defaultborder: 1px dashed black;
 /*Font Sizes, Widths, Colors etc.. */
 
 
-
 /*Begin Nesting to make media queries easier to write */
+
+.pagecontainer {
+	display: flex;
+	flex-wrap: wrap;
+	width: 65%;
+	margin:0 auto;
+
+	.header{
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+		margin: 0 auto;
+		border-bottom: @defaultborder;
+
+		.navbar{
+			display:flex;
+			width: 50%;
+			justify-content: flex-end;
+			align-items: center;
+			margin-top: @defaultverticalmargin;
+			margin-bottom: @defaultverticalmargin;
+
+			.navlink{
+				display:flex;
+				width: 25%;
+				justify-content: space-around;
+				align-items: center;
+				text-decoration: none;
+				color: @basefontcolor;
+			}
+		}
+	}
+
+	.topcontent{
+		display:flex;
+		width: 100%;
+		border-bottom: @defaultborder;
+		background: lightgrey;
+
+		.headlinecontainer{
+			display:flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 50%;
+
+			.mainheadline{
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				color: @basefontcolor;
+				font-size: @mainheaderfontsize;
+				margin-top: @defaultverticalmargin;
+				margin-bottom: @defaultverticalmargin;
+				font-weight: 300;
+			}
+
+		}
+		
+		.mainimage{
+			display: flex;
+			justify-content: center;
+			margin:0 auto;
+			margin-top: @defaultverticalmargin;
+			margin-bottom: @defaultverticalmargin;
+		}
+	}
+}
