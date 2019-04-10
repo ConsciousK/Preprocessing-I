@@ -52,17 +52,28 @@ html, body {
 }
 
 /*--------------- Begin Preprocesser Code here by kevin-grant ---------------*/
-
 /*Declare Variables */
 @basefontcolor: black;
 @defaultverticalmargin: 20px;
 @mainheaderfontsize: 50px;
-@subheaderfontsize: 20px;
+@subheaderfontsize: 30px;
 @defaultborder: 1px dashed black;
-/*Font Sizes, Widths, Colors etc.. */
+@skyblue: lightskyblue;
 
+/*Mixin For Content Containers */
+.defaultcontainer {
+	display: flex;
+	flex-direction: column;
+	width: 49%;
+	align-content: center;
+	box-shadow: 10px 10px 5px grey;
+	border: @defaultborder;
+	background: @skyblue;
+	margin-bottom: @defaultverticalmargin;
+	}
 
-/*Begin Nesting to make media queries easier to write */
+/*Begin Nesting */
+
 
 .pagecontainer {
 	display: flex;
@@ -73,9 +84,8 @@ html, body {
 	.header{
 		display: flex;
 		width: 100%;
-		justify-content: flex-end;
+		justify-content: center;
 		margin: 0 auto;
-		border-bottom: @defaultborder;
 
 		.navbar{
 			display:flex;
@@ -96,17 +106,19 @@ html, body {
 		}
 	}
 
-	.topcontent{
+	.topcontentcontainer{
 		display:flex;
 		width: 100%;
-		border-bottom: @defaultborder;
-		background: lightgrey;
+		margin-bottom:@defaultverticalmargin;
+		border: @defaultborder;
+		background: @skyblue;
+		box-shadow: 10px 10px 5px grey;
 
 		.headlinecontainer{
 			display:flex;
 			flex-direction: column;
 			justify-content: center;
-			width: 50%;
+			width: 65%;
 
 			.mainheadline{
 				display: flex;
@@ -117,6 +129,18 @@ html, body {
 				margin-top: @defaultverticalmargin;
 				margin-bottom: @defaultverticalmargin;
 				font-weight: 300;
+				text-shadow: 3px 3px 3px grey;
+			}
+
+			.subheader{
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				color: @basefontcolor;
+				font-size: @subheaderfontsize;
+				font-style: italic;
+				margin-top: @defaultverticalmargin;
+				margin-bottom: @defaultverticalmargin;
 			}
 
 		}
@@ -127,6 +151,122 @@ html, body {
 			margin:0 auto;
 			margin-top: @defaultverticalmargin;
 			margin-bottom: @defaultverticalmargin;
+			border:1px solid lightcyan;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			opacity: 0.8;
+		}
+	}
+
+	.maincontentcontainer{
+		display:flex;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.skillscontainer{
+			.defaultcontainer; /*example mixin*/
+
+			.subheader{
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				color: @basefontcolor;
+				font-size: @subheaderfontsize;
+				font-style: italic;
+				margin-top: @defaultverticalmargin;
+				margin-bottom: @defaultverticalmargin;
+				text-shadow: 3px 3px 3px grey;
+			}	 
+			
+			ul {
+				display: flex;
+				flex-direction: column;
+				width: 95%;
+				justify-content: center;
+				align-items: flex-start;
+				color: @basefontcolor;
+				margin: 0 auto;
+				line-height: 25px;
+				list-style-position: inside;
+				list-style-type: disc;
+				margin-bottom: @defaultverticalmargin;
+			}
+		}
+
+		.educationcontainer{
+			.defaultcontainer; /*example mixin*/
+
+			.subheader{
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				color: @basefontcolor;
+				font-size: @subheaderfontsize;
+				font-style: italic;
+				margin-top: @defaultverticalmargin;
+				margin-bottom: @defaultverticalmargin;
+				text-shadow: 3px 3px 3px grey;
+			}	 
+			
+			ul {
+				display: flex;
+				flex-direction: column;
+				width: 95%;
+				justify-content: center;
+				align-items: flex-start;
+				color: @basefontcolor;
+				margin: 0 auto;
+				line-height: 25px;
+				list-style-position: inside;
+				list-style-type: disc;
+				margin-bottom: @defaultverticalmargin;
+			}
+		}
+
+		.experiencecontainer{
+			.defaultcontainer; /*example mixin with additional width adjustment to override mixin style*/
+			width: 100%;
+
+			.subheader{
+				display: flex;
+				width: 100%;
+				justify-content: center;
+				color: @basefontcolor;
+				font-size: @subheaderfontsize;
+				font-style: italic;
+				margin-top: @defaultverticalmargin;
+				margin-bottom: @defaultverticalmargin;
+				text-shadow: 3px 3px 3px grey;
+			}	 
+			
+			ul {
+				display: flex;
+				flex-direction: column;
+				width: 95%;
+				justify-content: center;
+				align-items: center;
+				color: @basefontcolor;
+				margin: 0 auto;
+				line-height: 25px;
+				list-style-position: inside;
+				list-style-type: disc;
+				margin-bottom: @defaultverticalmargin;
+			}
+		}
+	}
+
+	footer{
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		margin: 0 auto;
+		color:grey;
+		background: lightskyblue;
+		font-size: 25px;
+		border: @defaultborder;
+		box-shadow: 10px 10px 5px grey;
+		p{
+			margin:0 auto;
 		}
 	}
 }

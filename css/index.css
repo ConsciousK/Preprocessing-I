@@ -132,8 +132,18 @@ body {
 }
 /*--------------- Begin Preprocesser Code here by kevin-grant ---------------*/
 /*Declare Variables */
-/*Font Sizes, Widths, Colors etc.. */
-/*Begin Nesting to make media queries easier to write */
+/*Mixin For Content Containers */
+.defaultcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  align-content: center;
+  box-shadow: 10px 10px 5px grey;
+  border: 1px dashed black;
+  background: lightskyblue;
+  margin-bottom: 20px;
+}
+/*Begin Nesting */
 .pagecontainer {
   display: flex;
   flex-wrap: wrap;
@@ -143,9 +153,8 @@ body {
 .pagecontainer .header {
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 0 auto;
-  border-bottom: 1px dashed black;
 }
 .pagecontainer .header .navbar {
   display: flex;
@@ -163,19 +172,21 @@ body {
   text-decoration: none;
   color: black;
 }
-.pagecontainer .topcontent {
+.pagecontainer .topcontentcontainer {
   display: flex;
   width: 100%;
-  border-bottom: 1px dashed black;
-  background: lightgrey;
+  margin-bottom: 20px;
+  border: 1px dashed black;
+  background: lightskyblue;
+  box-shadow: 10px 10px 5px grey;
 }
-.pagecontainer .topcontent .headlinecontainer {
+.pagecontainer .topcontentcontainer .headlinecontainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 65%;
 }
-.pagecontainer .topcontent .headlinecontainer .mainheadline {
+.pagecontainer .topcontentcontainer .headlinecontainer .mainheadline {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -184,11 +195,151 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 300;
+  text-shadow: 3px 3px 3px grey;
 }
-.pagecontainer .topcontent .mainimage {
+.pagecontainer .topcontentcontainer .headlinecontainer .subheader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: black;
+  font-size: 30px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pagecontainer .topcontentcontainer .mainimage {
   display: flex;
   justify-content: center;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  border: 1px solid lightcyan;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.8;
+}
+.pagecontainer .maincontentcontainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pagecontainer .maincontentcontainer .skillscontainer {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  align-content: center;
+  box-shadow: 10px 10px 5px grey;
+  border: 1px dashed black;
+  background: lightskyblue;
+  margin-bottom: 20px;
+  /*example mixin*/
+}
+.pagecontainer .maincontentcontainer .skillscontainer .subheader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: black;
+  font-size: 30px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 3px grey;
+}
+.pagecontainer .maincontentcontainer .skillscontainer ul {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  justify-content: center;
+  align-items: flex-start;
+  color: black;
+  margin: 0 auto;
+  line-height: 25px;
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+.pagecontainer .maincontentcontainer .educationcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  align-content: center;
+  box-shadow: 10px 10px 5px grey;
+  border: 1px dashed black;
+  background: lightskyblue;
+  margin-bottom: 20px;
+  /*example mixin*/
+}
+.pagecontainer .maincontentcontainer .educationcontainer .subheader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: black;
+  font-size: 30px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 3px grey;
+}
+.pagecontainer .maincontentcontainer .educationcontainer ul {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  justify-content: center;
+  align-items: flex-start;
+  color: black;
+  margin: 0 auto;
+  line-height: 25px;
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+.pagecontainer .maincontentcontainer .experiencecontainer {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  align-content: center;
+  box-shadow: 10px 10px 5px grey;
+  border: 1px dashed black;
+  background: lightskyblue;
+  margin-bottom: 20px;
+  /*example mixin with additional width adjustment to override mixin style*/
+  width: 100%;
+}
+.pagecontainer .maincontentcontainer .experiencecontainer .subheader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: black;
+  font-size: 30px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 3px grey;
+}
+.pagecontainer .maincontentcontainer .experiencecontainer ul {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin: 0 auto;
+  line-height: 25px;
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+.pagecontainer footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  color: grey;
+  background: lightskyblue;
+  font-size: 25px;
+  border: 1px dashed black;
+  box-shadow: 10px 10px 5px grey;
+}
+.pagecontainer footer p {
+  margin: 0 auto;
 }
