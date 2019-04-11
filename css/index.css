@@ -1,1 +1,345 @@
-/* Compile your LESS file! */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/*--------------- Begin Preprocesser Code here by kevin-grant ---------------*/
+/*Declare Variables */
+/*Mixin For Content Containers */
+.defaultcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  align-content: center;
+  box-shadow: 10px 10px 5px grey;
+  border: 1px dashed black;
+  background: lightskyblue;
+  margin-bottom: 20px;
+}
+/*Begin Nesting */
+.pagecontainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+  margin: 0 auto;
+}
+.pagecontainer .header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.pagecontainer .header .navbar {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pagecontainer .header .navbar .navlink {
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.pagecontainer .topcontentcontainer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px dashed black;
+  background: lightskyblue;
+  box-shadow: 10px 10px 5px grey;
+}
+.pagecontainer .topcontentcontainer .headlinecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+}
+.pagecontainer .topcontentcontainer .headlinecontainer .mainheadline {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: black;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  text-shadow: 3px 3px 3px grey;
+}
+.pagecontainer .topcontentcontainer .headlinecontainer .subheader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: black;
+  font-size: 30px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pagecontainer .topcontentcontainer .mainimage {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid lightcyan;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0.8;
+}
+.pagecontainer .maincontentcontainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pagecontainer .maincontentcontainer .skillscontainer {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  align-content: center;
+  box-shadow: 10px 10px 5px grey;
+  border: 1px dashed black;
+  background: lightskyblue;
+  margin-bottom: 20px;
+  /*example mixin*/
+}
+.pagecontainer .maincontentcontainer .skillscontainer .subheader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: black;
+  font-size: 30px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 3px grey;
+}
+.pagecontainer .maincontentcontainer .skillscontainer ul {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  justify-content: center;
+  align-items: flex-start;
+  color: black;
+  margin: 0 auto;
+  line-height: 25px;
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+.pagecontainer .maincontentcontainer .educationcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  align-content: center;
+  box-shadow: 10px 10px 5px grey;
+  border: 1px dashed black;
+  background: lightskyblue;
+  margin-bottom: 20px;
+  /*example mixin*/
+}
+.pagecontainer .maincontentcontainer .educationcontainer .subheader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: black;
+  font-size: 30px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 3px grey;
+}
+.pagecontainer .maincontentcontainer .educationcontainer ul {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  justify-content: center;
+  align-items: flex-start;
+  color: black;
+  margin: 0 auto;
+  line-height: 25px;
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+.pagecontainer .maincontentcontainer .experiencecontainer {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  align-content: center;
+  box-shadow: 10px 10px 5px grey;
+  border: 1px dashed black;
+  background: lightskyblue;
+  margin-bottom: 20px;
+  /*example mixin with additional width adjustment to override mixin style*/
+  width: 100%;
+}
+.pagecontainer .maincontentcontainer .experiencecontainer .subheader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: black;
+  font-size: 30px;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 3px grey;
+}
+.pagecontainer .maincontentcontainer .experiencecontainer ul {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin: 0 auto;
+  line-height: 25px;
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-bottom: 20px;
+}
+.pagecontainer footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  color: grey;
+  background: lightskyblue;
+  font-size: 25px;
+  border: 1px dashed black;
+  box-shadow: 10px 10px 5px grey;
+}
+.pagecontainer footer p {
+  margin: 0 auto;
+}
